@@ -51,20 +51,19 @@ body{
 
 #message{
     font-size: 20px;
-    color: gray; 
-}
-
-#message:hover{
-    color: red;
+    color: #5f5f5f; 
 }
 
 #notifications{
     font-size: 20px;
-    color: gray;
+    color: #5f5f5f;
 }
-#notifications:hover{
-    color: red;
+
+.li-hover:hover{
+    border-radius: 50%;
+    background-color: #dddddd;
 }
+
 .search{   
     width: 70%;
     position: relative;
@@ -91,21 +90,12 @@ body{
     border-color: #dfe1e500;
 }
 
-.notification i{
-    font-size: 20px;
-    
-    color: gray;
-    margin-top: 5px;
-
-}
-.notification i:hover{
-    color: rgba(0, 17, 255, 0.733);
+#profile-img{
+    transform: translate(-6px, -6px);
 }
 
-
-.profile img{
+#profile-img img{
     object-fit: cover;
-
     border-radius: 50%;
 }
 
@@ -148,18 +138,90 @@ body{
 .card_large{
     grid-row-end: span 40;
 }
+.card{
+    position: relative;
+}
 button{
     position: absolute;
-    left: 60%;
-    top: 5%;
-    background-color: #060023;
+    left: 57%;
+    top: 3%;
+    background-color: #e60023;
+    color: white;
+    font-weight: 600;
     padding: 13px 15px;
     border-radius: 30px;
     border: none;
-    visibility: hidden;
-    display: none;
-    z-index: 5;
+    /* display: none; */
+    /* visibility: hidden;  */
+    opacity: 0;
+    z-index: 10;
+    transition: .5s ;
 }
+
+.card-image:hover button{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card-image button:hover{
+    opacity: 0.8;
+}
+
+.flechita{
+    width: 40px;
+    height: 40px;
+    left: 57%;
+    top: 82%;
+    position: absolute;
+    padding: 13px 15px;
+    opacity: 0;
+    z-index: 10;
+    transition: .5s;
+    border-radius: 50%;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-arrow-up-from-bracket{
+    font-size: 15px;
+    color: black;
+    background-color: #eeeeee;
+}
+.card-image:hover div{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card div:hover{
+    opacity: 0.8;
+}
+
+.elipsis{
+    width: 40px;
+    height: 40px;
+    left: 76%;
+    top: 82%;
+    position: absolute;
+    padding: 13px 15px;
+    opacity: 0;
+    z-index: 10;
+    transition: .5s;
+    border-radius: 50%;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-ellipsis{
+    font-size: 15px;
+    color: black;
+    background-color: #eeeeee;
+}
+
+
 .card-image:hover{
     opacity: 0.9;
     visibility: visible;
